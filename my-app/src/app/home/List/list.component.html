@@ -1,0 +1,34 @@
+<h2> The whole list:</h2>
+<div>
+
+  <table class="table table-fixed-header">
+    <thead>
+    <tr>
+      <th>№</th>
+      <th>Date </th>
+      <th>Name</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let post of posts; let i = index">
+    <tr *ngIf="post != activePost">
+      <td>{{i+1}}</td>
+      <td>{{post.dateNow}}</td>
+      <td>{{post.name}}</td>
+      <td> <button (click)='deletePost(post, i)'>X</button></td>
+      <td> <button class="btn btn-primary" (click)='editPost(post)'>Edit</button></td>
+    </tr>
+    <tr *ngIf="post == activePost">
+      <td>{{i+1}}</td>
+      <td><input class='form-control' [(ngModel)]="post.dateNow"  type='text' value="{{post.dateNow}}"></td>
+      <td>
+        <input class='form-control' name='name' [(ngModel)]="post.name" type="text" value="post.name">
+      </td>
+      <td>
+        <a class='btn btn-primary' (click)='updatePost(post, i)'> Save </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+{{errorMessage}}

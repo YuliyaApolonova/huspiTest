@@ -1,0 +1,57 @@
+
+<div>
+  <form class='col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4' method='post' action='http://localhost:1337/send-mail' enctype="text/plain" [formGroup]="registrationForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+      <label  class="center-block" for="firstName"> First name: </label>
+      <input  class="form-control" type="text" formControlName="firstName" id="firstName" required>
+      <div *ngIf="formErrors.firstName" class="alert alert-danger">
+        {{ formErrors.firstName }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label  class="center-block" for="lastName"> Last name: </label>
+      <input  class="form-control" type="text" formControlName="lastName" id="lastName" required>
+      <div *ngIf="formErrors.lastName" class="alert alert-danger">
+        {{ formErrors.lastName }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label  class="center-block" for="email"> Email: </label>
+      <input  class="form-control" type="text" formControlName="email" id="email" required>
+      <div *ngIf="formErrors.email" class="alert alert-danger">
+        {{ formErrors.email }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label  class="center-block" for="telephone"> Telephone: </label>
+      <input  class="form-control" type="text" formControlName='telephone' id="telephone">
+      <div *ngIf="formErrors.telephone" class="alert alert-danger">
+        {{ formErrors.telephone }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label  class="center-block" for="username"> Login: </label>
+      <input  class="form-control" type="text" formControlName="username" id="username" required>
+      <div *ngIf="formErrors.username" class="alert alert-danger">
+        {{ formErrors.username }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label  class="center-block" for="password"> Password: </label>
+      <input  class="form-control" type="password" formControlName="password" id="password" required>
+      <div *ngIf="formErrors.password" class="alert alert-danger">
+        {{ formErrors.password }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label  class="center-block" for="confPassword"> Confirm password: </label>
+      <input  class="form-control" type="password" formControlName="confPassword" id="confPassword" required>
+      <div *ngIf="formErrors.confPassword" class="alert alert-danger">
+        {{ formErrors.confPassword }}
+      </div>
+      <!--<div [hidden]="!registrationForm.controls['confPassword'].hasError('mismatchedPassword')" class="alert alert-danger">Passwords not match</div>-->
+    </div>
+    <button class="btn btn-success" type="submit" [disabled]="!registrationForm.valid">Submit</button>
+  </form>
+  {{message}}
+</div>

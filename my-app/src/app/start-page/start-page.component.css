@@ -1,0 +1,20 @@
+a:visited {
+  color: darkblue; }
+
+a:hover {
+  color: #62c2e4; }
+
+body {
+  background: url("/app/images/cockle_paper.jpg"); }
+
+a {
+  font-size: 2vh;
+  text-decoration: none;
+  cursor: pointer; }
+
+nav {
+  height: 20px; }
+  nav li {
+    list-style-type: none; }
+
+/*# sourceMappingURL=start-page.component.css.map */

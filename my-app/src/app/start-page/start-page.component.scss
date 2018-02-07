@@ -1,0 +1,13 @@
+@import '../../styles.scss';
+
+a {
+  font-size: 2vh;
+  text-decoration: none;
+  cursor: pointer;
+}
+nav {
+  height: 20px;
+  li {
+    list-style-type: none;
+  }
+}

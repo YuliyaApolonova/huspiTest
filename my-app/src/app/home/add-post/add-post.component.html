@@ -1,0 +1,33 @@
+<div >
+<h3> Add new: </h3>
+<form id="addPostForm" class='col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-xs-12 col-sm-12' #addPostForm="ngForm" (ngSubmit)="onSubmit(addPostForm)" novalidate>
+
+  <div class="form-group">
+    <label for="dateNow">From: </label>
+    <div class="input-group">
+      <input class="form-control" placeholder="yyyy-mm-dd"
+             id="dateNow"
+             name="dp1" [(ngModel)]="model.dateNow"
+             placement="bottom-right"
+             [minDate]="minDate"
+             ngbDatepicker #d="ngbDatepicker">
+      <div class="input-group-addon" (click)="d.toggle()" >
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name"> Name:</label>
+    <input id="name" class="custom-select"
+            name="type"
+            [(ngModel)]="model.name" required
+            #power="ngModel" >
+
+    </input>
+
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!addPostForm.form.valid">Add</button>
+</form>
+</div>
+{{errorMessage}}

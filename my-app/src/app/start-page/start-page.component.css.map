@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKA,SAAU;EACR,KAAK,EAAE,QAAQ;;AAEjB,OAAQ;EACN,KAAK,EAAE,OAAO;;AAEhB,IAAI;EACF,UAAU,EAAE,mCAAmC;;ACVjD,CAAE;EACA,SAAS,EAAE,GAAG;EACd,eAAe,EAAE,IAAI;EACrB,MAAM,EAAE,OAAO;;AAEjB,GAAI;EACF,MAAM,EAAE,IAAI;EACZ,MAAG;IACD,eAAe,EAAE,IAAI",
+"sources": ["../../styles.scss","start-page.component.scss"],
+"names": [],
+"file": "start-page.component.css"
+}
